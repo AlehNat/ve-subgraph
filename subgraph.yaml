@@ -4,11 +4,11 @@ schema:
 dataSources:
   - name: ControllerData
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
-      address: "0xA609fA657A9cfbD658be45dcbe31cc477F2d6d18"
+      address: "0x2844E98A7A2d05784B7CdA8EeAAdadE40EBbBB6C"
       abi: ControllerAbi
-      startBlock: 11208650
+      startBlock: 111816755
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -66,53 +66,53 @@ dataSources:
           handler: handleOperatorRemoved
       file: ./src/controller.ts
 
-  - name: VaultFactoryData
-    kind: ethereum/contract
-    network: fuji
-    source:
-      address: "0x1606Cee37b0171fbCa4FB1982Dc51f9763ca0863"
-      abi: VaultFactoryAbi
-      startBlock: 11208650
-    mapping:
-      file: ./src/vault-factory.ts
-      kind: ethereum/events
-      apiVersion: 0.0.7
-      language: wasm/assemblyscript
-      entities:
-        - VaultFactoryEntity
-      abis:
-        - name: VaultFactoryAbi
-          file: ./abis/VaultFactory.json
-        - name: VaultAbi
-          file: ./abis/TetuVaultV2.json
-        - name: ControllerAbi
-          file: ./abis/ControllerV2.json
-        - name: ProxyAbi
-          file: ./abis/Proxy.json
-        - name: LiquidatorAbi
-          file: ./abis/TetuLiquidator.json
-        - name: StrategySplitterAbi
-          file: ./abis/StrategySplitterV2.json
-        - name: MultiBribeAbi
-          file: ./abis/MultiBribe.json
-        - name: MultiGaugeAbi
-          file: ./abis/MultiGauge.json
-        - name: VeTetuAbi
-          file: ./abis/VeTetu.json
-      eventHandlers:
-        - event: VaultDeployed(address,address,string,string,address,uint256,address,address,address,address,address)
-          handler: handleVaultDeployed
-        - event: VaultImplChanged(address)
-          handler: handleVaultImplChanged
-        - event: VaultInsuranceImplChanged(address)
-          handler: handleVaultInsuranceImplChanged
-        - event: SplitterImplChanged(address)
-          handler: handleSplitterImplChanged
+#  - name: VaultFactoryData
+#    kind: ethereum/contract
+#    network: baobab
+#    source:
+#      address: "0x1606Cee37b0171fbCa4FB1982Dc51f9763ca0863"
+#      abi: VaultFactoryAbi
+#      startBlock: 11208650
+#    mapping:
+#      file: ./src/vault-factory.ts
+#      kind: ethereum/events
+#      apiVersion: 0.0.7
+#      language: wasm/assemblyscript
+#      entities:
+#        - VaultFactoryEntity
+#      abis:
+#        - name: VaultFactoryAbi
+#          file: ./abis/VaultFactory.json
+#        - name: VaultAbi
+#          file: ./abis/TetuVaultV2.json
+#        - name: ControllerAbi
+#          file: ./abis/ControllerV2.json
+#        - name: ProxyAbi
+#          file: ./abis/Proxy.json
+#        - name: LiquidatorAbi
+#          file: ./abis/TetuLiquidator.json
+#        - name: StrategySplitterAbi
+#          file: ./abis/StrategySplitterV2.json
+#        - name: MultiBribeAbi
+#          file: ./abis/MultiBribe.json
+#        - name: MultiGaugeAbi
+#          file: ./abis/MultiGauge.json
+#        - name: VeTetuAbi
+#          file: ./abis/VeTetu.json
+#      eventHandlers:
+#        - event: VaultDeployed(address,address,string,string,address,uint256,address,address,address,address,address)
+#          handler: handleVaultDeployed
+#        - event: VaultImplChanged(address)
+#          handler: handleVaultImplChanged
+#        - event: VaultInsuranceImplChanged(address)
+#          handler: handleVaultInsuranceImplChanged
+#        - event: SplitterImplChanged(address)
+#          handler: handleSplitterImplChanged
 
 templates:
   - name: PlatformVoterTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: PlatformVoterAbi
     mapping:
@@ -143,7 +143,7 @@ templates:
 
   - name: MultiBribeTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: MultiBribeAbi
     mapping:
@@ -176,7 +176,7 @@ templates:
 
   - name: MultiGaugeTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: MultiGaugeAbi
     mapping:
@@ -219,7 +219,7 @@ templates:
 
   - name: TetuVoterTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: TetuVoterAbi
     mapping:
@@ -254,7 +254,7 @@ templates:
 
   - name: VeDistributorTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: VeDistributorAbi
     mapping:
@@ -285,7 +285,7 @@ templates:
 
   - name: VeTetuTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: VeTetuAbi
     mapping:
@@ -318,7 +318,7 @@ templates:
 
   - name: ForwarderTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: ForwarderAbi
     mapping:
@@ -355,7 +355,7 @@ templates:
 
   - name: InvestFundTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: InvestFundAbi
     mapping:
@@ -378,7 +378,7 @@ templates:
 
   - name: VaultTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: VaultAbi
     mapping:
@@ -426,7 +426,7 @@ templates:
 
   - name: StrategySplitterTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: StrategySplitterAbi
     mapping:
@@ -485,7 +485,7 @@ templates:
 
   - name: StrategyTemplate
     kind: ethereum/contract
-    network: fuji
+    network: baobab
     source:
       abi: StrategyAbi
     mapping:
